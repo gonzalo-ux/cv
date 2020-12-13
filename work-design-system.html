@@ -9,10 +9,23 @@
     <link rel="stylesheet" href="../assets/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/app.css" />
   </head>
-  <body class="">
+  <body class="light-theme">
      <header class="top-bar header-solid">
   <div class="top-bar-left logo">
     <img src="./assets/img/logo.svg" alt="" />
+  </div>
+  <div class="switch-container">
+    <div class="switch dark-theme">
+      <input
+        class="switch-input"
+        id="exampleSwitch"
+        type="checkbox"
+        name="exampleSwitch"
+      />
+      <label class="switch-paddle" for="exampleSwitch">
+        <span class="show-for-sr">Download Kittens</span>
+      </label>
+    </div>
   </div>
   <div class="top-bar-right main-nav">
     <ul class="h5">
@@ -40,18 +53,21 @@
       <div class="cell small-12 medium-12 large-7">
         <h3>GCS Design System</h3>
         <p>
-          At the end of 2018, Equifax launched myEquifax.com, a Credit score and
-          Report solution in the US which was built and delivered by the GCS dev
-          teams in Dublin. This first release had only a few features available
-          to consumers for free, but there were already big plans for incoming
-          paid product launches.
+          At the end of 2018, Equifax launched
+          <a href="https://my.equifax.com/membercenter/#/login" target="_blank"
+            >myEquifax.com</a
+          >
+          in the US, a Credit score and Report solution which was built and
+          delivered by the GCS dev teams in Dublin. This first release had only
+          a few features available to consumers for free, but there were already
+          big plans for incoming paid product launches.
         </p>
         <p>
           <strong>Problem:</strong> <br />
           myEquifax US, would be replicated in other domains like the UK, Canada
           and Australia. This pushed the Dublin team to escalate its technical
           implementation and design language to set the collaboration between
-          20+ teams in 5 countries.
+          20+ teams in 6 countries.
         </p>
         <p>
           <strong>Team:</strong> <br />
@@ -76,8 +92,8 @@
       </div>
       <div class="cell large-8">
         <p>
-          I partnered with front end engineers and the UI architect at the
-          beginning to build and expose our components library; designing
+          At the begining, I partnered with front end engineers and the UI
+          architect to build and expose our components library; designing
           examples, writing documentation and use cases in a Confluence page.
         </p>
         <p>
@@ -85,11 +101,12 @@
           connected all the components and patterns to this set of tokens
           (colour, typography, spacing, etc.). Then we worked extracting all the
           styling files from myEquifax-US to build an external theme that could
-          be reusable. These set of libraries components, design-tokens,
-          documentation and examples, and the UI theme were the first step of a
-          basic system that today lives as part of a global platform. This
-          global platform and the Design System would be used by 20+ teams in 6
-          countries to create myEquifax Canada and UK.
+          be reusable. I built and maintain our Sketch UI components, Icons,
+          Patterns an Mobile libraries. These set of libraries components,
+          design-tokens, documentation and examples, and the UI theme were the
+          first step of a basic system that today lives as part of a global
+          platform. This global platform and the Design System would be used to
+          create myEquifax Canada and UK.
         </p>
         <p class="lead">
           <strong
@@ -104,7 +121,7 @@
     <div class="grid-x media-object align-center">
       <div class="cell large-12">
         <div class="media-object-section">
-          <img src="./assets/img/ds/ds-collection--large.png" alt="" />
+          <img src="./assets/img/ds/ds-collection-xl--white.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -141,7 +158,11 @@
     <div class="grid-x media-object align-center">
       <div class="cell large-10">
         <div class="media-object-section">
-          <img src="./assets/img/ds/ds-global-platform-scheme.png" alt="" />
+          <img
+            class="img-bg-dark"
+            src="./assets/img/ds/ds-global-platform-scheme.svg"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -173,7 +194,11 @@
     <div class="grid-x media-object align-center img-info">
       <div class="cell large-12">
         <div class="media-object-section">
-          <img src="./assets/img/ds/ds-tokens-scheme.png" alt="" />
+          <img
+            class="img-bg-dark"
+            src="./assets/img/ds/ds-tokens-scheme.svg"
+            alt=""
+          />
         </div>
       </div>
       <p class="h6">
@@ -205,7 +230,11 @@
     <div class="grid-x media-object align-center">
       <div class="cell large-8">
         <div class="media-object-section">
-          <img src="./assets/img/ds/ds-tokens-example.png" alt="" />
+          <img
+            class="img-bg-dark"
+            src="./assets/img/ds/ds-tokens-example.svg"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -253,22 +282,23 @@
       </div>
       <div class="cell large-8">
         <p>
-          I’ve been removing all the unused variables in our code base and then
-          tied them up to our new tokens making all the components dependent on
-          a few sets of SASS variables. Since we are not a full team dedicated
-          this is an ongoing task. It provided us with the option to use tools
-          like Theo or StyleDictionary to scale our rules to other development
-          platforms. As every platform has its own rules, design tokens help us
-          overcome those pain points to deliver consistency. Independently of
-          the technology used. But that’s a different story, check my article
-          related to design tokens.
+          Design tokens provided us with the option to use tools like Theo or
+          StyleDictionary to scale our rules to other development platforms. As
+          every platform has its own rules, design tokens help us overcome those
+          pain points to deliver consistency. Independently of the technology
+          used. But that’s a different story, check my article related to design
+          tokens.
         </p>
       </div>
     </div>
     <div class="grid-x align-center">
       <div class="cell small-12 large-6">
         <div class="media-object-section">
-          <img src="./assets/img/ds/ds-delivery-strategy.png" alt="" />
+          <img
+            class="img-bg-dark"
+            src="./assets/img/ds/ds-delivery-strategy.svg"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -297,12 +327,12 @@
           the system, a classic Design System website where we added all the
           documentation needed to understand the guidelines and to use it to
           build better applications, more accessible and at speed. We use our
-          own theme to build the showcase, exposing the design tokens, the
-          angular components with working code documentation, accessibility and
-          design guidelines, examples for grid and layouts, responsiveness, and
-          templates pages in code and Sketch to speed up the process. I also
-          linked the Sketch library repo and added a getting started guide for
-          developers and designers.
+          own theme and components to build the showcase, exposing the design
+          tokens, the angular components with working code documentation,
+          accessibility and design guidelines, examples for grid and layouts,
+          responsiveness, and templates pages in code and Sketch files to speed
+          up the process. I also linked the Sketch library repo and added a
+          getting started guide for developers and designers.
         </p>
       </div>
     </div>
@@ -322,17 +352,20 @@
       <div class="cell large-8">
         <p>
           The showcase allowed us to put the system in public though our first
-          release (internally) and start collecting feedback to improve it. We
-          feed the system with what our (internal) consumers are demanding, like
-          the need of an icons catalogue and SVG guidelines for new icons, or
-          add general to specific accessibility feature, especially for
-          entry-level developers. This way, we started to make work sessions
-          with dev teams to understand their use of the system and what problems
-          we were solving in between, and ultimately understand what the system
-          could do for them. We followed a similar process with PMs and
-          different business units that could benefit from the use and rely on
-          the GCS Design System. Like when we started to discover the
-          inconsistency in our writing and language.
+          releases (internally) to start collecting feedback to improve our
+          Design system regarding the need of our internal users such as
+          developers, POs and PMs. We feed the system with what our (internal)
+          consumers are demanding, like the need of an icons catalogue and SVG
+          guidelines for creating new icons, or add general to specific
+          accessibility features, especially for entry-level developers and how
+          to use automation test to flag accessibility issues. This way, we
+          started to make work sessions with different teams to understand their
+          use of the system and what problems we were solving in between, and
+          ultimately understand what the system could do for them. We followed a
+          similar process with different business units that could benefit from
+          the use and rely on the GCS Design System. Like when we started to
+          discover the inconsistency in our writing and language that lead us to
+          partner with copywritters to deliver content guidelines.
         </p>
       </div>
     </div>
@@ -353,16 +386,26 @@
           cadence paired with dev teams here in Dublin.
         </p>
         <p>
-          Currently we have a different goal in mind which is dissemination,
-          adoption, and a way to collect constant feedback from our internal and
-          external users. This is an ongoing effort with constant iterations.
+          Currently we are focused on improving dissemination, adoption, and
+          collect constant feedback from our internal and external users. This
+          is an ongoing effort with constant iterations.
         </p>
       </div>
     </div>
-    <div class="grid-x media-object align-center">
-      <div class="cell large-8">
+    <div class="grid-x align-center">
+      <div class="cell small-12 large-4">
         <div class="media-object-section">
-          <img src="./assets/img/ds/ds-tokens-example.png" alt="" />
+          <img src="./assets/img/ds/ds-hero-overview--large.png" alt="" />
+        </div>
+      </div>
+      <div class="cell small-12 large-4">
+        <div class="media-object-section">
+          <img src="./assets/img/ds/ds-buttons-usage--large.png" alt="" />
+        </div>
+      </div>
+      <div class="cell small-12 large-4">
+        <div class="media-object-section">
+          <img src="./assets/img/ds/ds-buttons-style--large.png" alt="" />
         </div>
       </div>
     </div>
@@ -371,11 +414,13 @@
         <p class="">
           As more teams entered to work in different initiatives that would live
           in myEquifax, we faced the challenge of making it available and
-          valuable to not only our colleagues but also third parties. This would
-          mean that we would have to make training and work sessions to
-          disseminate the system, weekly meetings where we’ll invite people of
-          different roles to gather their doubts and requirements that we could
-          take as Jira tickets and add to our Design System infinite backlog.
+          valuable to not only our colleagues but also third parties like
+          external agencies in other countryes. This would mean that we would
+          have to make training and work sessions to disseminate the system,
+          weekly meetings where we’ll invite people of different roles to gather
+          their doubts and requirements that we could take as Jira tickets and
+          add to our Design System
+          <span class="strike">infinite</span> backlog.
         </p>
       </div>
     </div>
@@ -390,16 +435,17 @@
         <p class="">
           This project was born from no requirements, rather by an undercover
           need that my manager and I saw. It helped me to build my position as a
-          designer where I set practices and processes so the system could feed
-          the products, and products could feed the system.
+          designer for our global platform where I set practices and processes
+          so the system could feed the products, and products could feed the
+          system.
         </p>
         <p>
           A design system is never done, there are always fixes, bugs and
-          improvements to make, such as experiment with react components,
-          building a templates library in Sketch or planning to add
-          microinteractions. I have continued maintaining and co-leading the
-          system, designing new components and solutions that help to develop
-          better products for myEquifax.
+          improvements to make, such as support for react components and Figma
+          libraries, building templates library in Sketch or add
+          microinteractions and motion guidelines. I have continued maintaining
+          and co-leading the system, designing new components and solutions that
+          help to develop better products for myEquifax.
         </p>
       </div>
     </div>
@@ -414,13 +460,29 @@
 </div>
 <footer>
   <div class="rrss">
-    <a href=""><i class="fab fa-instagram"></i></a>
-    <a href=""><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-linkedin-in"></i></a>
-    <a href=""><i class="fab fa-medium-m"></i></a>
+    <a href="https://www.instagram.com/gonzalo_vasquez_correa/" target="_blank"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a href="https://twitter.com/gonzovas?lang=en" target="_blank"
+      ><i class="fab fa-twitter"></i
+    ></a>
+    <a href="https://www.linkedin.com/in/gonzalovc/" target="_blank"
+      ><i class="fab fa-linkedin-in"></i
+    ></a>
+    <a href="https://gonzalo-vasquez-correa.medium.com/" target="_blank"
+      ><i class="fab fa-medium-m"></i
+    ></a>
   </div>
   <div class="tag">
-    <p>Website design and content © 2020 Gonzalo Vásquez</p>
+    <p>
+      Website
+      <a
+        href="https://www.figma.com/file/384klSASNuxwrsPfwHPs5U/portfolio-20?node-id=0%3A1"
+        target="_blank"
+        >design and content</a
+      >
+      © 2020 Gonzalo Vásquez
+    </p>
   </div>
 </footer>
 
