@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js theme-light" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -9,12 +9,18 @@
     <link rel="stylesheet" href="../assets/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/app.css" />
   </head>
-  <body class="">
-     <header class="top-bar">
+  <body>
+     <header class="top-bar header-solid">
   <div class="top-bar-left logo">
     <a href="index.html">
       <img src="./assets/img/logo.svg" alt="" />
     </a>
+  </div>
+  <div class="switch-container">
+    <label id="switch" class="switch">
+      <input type="checkbox" onchange="toggleTheme()" id="slider" />
+      <span class="slider round"></span>
+    </label>
   </div>
   <div class="top-bar-right main-nav">
     <ul class="h5">
@@ -27,7 +33,11 @@
   <div class="grid-x intro main align-center">
     <div class="cell large-8">
       <h1>Hi, I'm Gonzalo</h1>
-      <h3>a designer from 🇨🇱 Chile currently based in Dublin, Ireland.</h3>
+      <h2 class="h3">
+        <strong>
+          a designer from 🇨🇱 Chile currently based in Dublin, Ireland.
+        </strong>
+      </h2>
     </div>
   </div>
   <div class="grid-x about-avatar align-center">
@@ -67,7 +77,7 @@
   </div>
   <div class="grid-x align-center">
     <div class="cell large-8">
-      <h3>Articles</h3>
+      <h2 class="h3"><strong>Articles</strong></h2>
     </div>
   </div>
   <div class="grid-x grid-margin-x align-center articles">
@@ -77,10 +87,11 @@
           <a
             href="https://gonzalo-vasquez-correa.medium.com/design-tokens-on-your-design-system-af1a7c35ff06"
             target="_blank"
-            class="h5"
+            class=""
             >Design Tokens on your Design System
             <i class="fas fa-external-link-alt"></i
           ></a>
+
           <p>
             If you are starting to work on a Design System, consider make a
             pause and define your Design Tokens first.
@@ -90,7 +101,6 @@
           <a
             href="https://gonzalo-vasquez-correa.medium.com/de-chile-a-irlanda-como-ux-da7ca02fb8b2"
             target="_blank"
-            class="h5"
             >De Chile a Irlanda como UX (spanish)
             <i class="fas fa-external-link-alt"></i
           ></a>
@@ -100,7 +110,6 @@
           <a
             href="https://gonzalo-vasquez-correa.medium.com/research-a-distancia-ec0447c5890a"
             target="_blank"
-            class="h5"
             >Research a distancia (spanish)
             <i class="fas fa-external-link-alt"></i
           ></a>
@@ -112,7 +121,7 @@
 
   <div class="grid-x align-center">
     <div class="cell large-8">
-      <h3>Social</h3>
+      <h2 class="h3"><strong>Social</strong></h2>
     </div>
   </div>
   <div class="grid-x podcast align-center">
@@ -198,5 +207,32 @@
 
 
     <script src="assets/js/app.js"></script>
+    <script>
+      // function to set a given theme/color-scheme
+      function setTheme(themeName) {
+        localStorage.setItem("theme", themeName);
+        document.documentElement.className = themeName;
+      }
+
+      // function to toggle between light and dark theme
+      function toggleTheme() {
+        if (localStorage.getItem("theme") === "theme-dark") {
+          setTheme("theme-light");
+        } else {
+          setTheme("theme-dark");
+        }
+      }
+
+      // Immediately invoked function to set the theme on initial load
+      (function () {
+        if (localStorage.getItem("theme") === "theme-dark") {
+          setTheme("theme-dark");
+          document.getElementById("slider").checked = false;
+        } else {
+          setTheme("theme-light");
+          document.getElementById("slider").checked = true;
+        }
+      })();
+    </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js theme-light" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/app.css" />
   </head>
-  <body class="">
+  <body>
      <header class="top-bar header-solid">
   <div class="top-bar-left logo">
     <a href="index.html">
@@ -179,5 +179,32 @@
 
 
     <script src="assets/js/app.js"></script>
+    <script>
+      // function to set a given theme/color-scheme
+      function setTheme(themeName) {
+        localStorage.setItem("theme", themeName);
+        document.documentElement.className = themeName;
+      }
+
+      // function to toggle between light and dark theme
+      function toggleTheme() {
+        if (localStorage.getItem("theme") === "theme-dark") {
+          setTheme("theme-light");
+        } else {
+          setTheme("theme-dark");
+        }
+      }
+
+      // Immediately invoked function to set the theme on initial load
+      (function () {
+        if (localStorage.getItem("theme") === "theme-dark") {
+          setTheme("theme-dark");
+          document.getElementById("slider").checked = false;
+        } else {
+          setTheme("theme-light");
+          document.getElementById("slider").checked = true;
+        }
+      })();
+    </script>
   </body>
 </html>
